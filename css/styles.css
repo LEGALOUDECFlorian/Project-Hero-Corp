@@ -10,24 +10,32 @@ body {
 }
 
 .page {
-  width: 95%;
-  margin: 0.5rem auto 1rem auto;
+  width: 70%;
+  margin: 0.5rem;
+  margin-left: 15%;
+  
+  /* margin: 0.5rem auto 1rem auto; */
   background-color: white;
-  padding: 1%;
+  padding: .8rem;
 }
 
 /* debut header */
 
 header{
-  background-color: rgb(233, 227, 214);
+  background-color: white;
 }
 
 .header__logo {
-  
+  /* border: 2px red solid; */
   margin-left: auto;
   margin-right: auto;
   width: 20rem;
-  margin-bottom: .5rem;
+}
+
+.header_container_logo {
+  width: 100%;
+  background-color: rgb(233, 227, 214);
+  /* border: 2px blue solid; */
 }
 
 .image__principale {
@@ -36,19 +44,19 @@ header{
 
 .header__title {
   background-color: white;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
   text-align: center;
   border-top: 2px solid #7c1b2b;
   border-bottom: 2px solid #7c1b2b;
   padding: 0.8rem;
-  margin: 1rem 0 1rem 0;
+  margin: 1% 0 1% 0;
 }
 
 .header__subtitle {
   background-color: black;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0.3rem 0.8rem 0.3rem 0.8rem;
 }
 
@@ -56,14 +64,14 @@ header{
 
 .bloc-centrale {
   display: flex;
-  padding-right: 1rem;
-  gap: 1rem;
+  gap: 1%;
 }
-/* debut bandeau gauche */
+
+/* debut bandeau de navigation */
 .lien-acteurs {
   background-color: rgb(233, 227, 214);
 
-  width: 200px;
+  width: 280px;
   text-align: center;
   padding: 1rem;
 }
@@ -104,14 +112,14 @@ header{
   box-shadow: 1px 1px 2px 0 #7c1b2b;
 }
 
-/* fin bandeau gauche */
+/* fin bandeau de navigation */
 
-/* debut bloc droit */
+/* debut bloc centrale */
+
 .main {
   background-color: rgb(233, 227, 214);
-  width: 80%;
-  margin: auto;
-  padding: 2rem;
+  width: 100%;
+  padding-bottom: 1rem;
 }
 
 .article {
@@ -120,8 +128,9 @@ header{
 }
 
 .article__title {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
+  padding-top: 2rem;
 }
 
 /* logo centrale */
@@ -141,7 +150,7 @@ header{
 
 .paragraphe,
 aside {
-  margin: 2rem;
+  margin: 2rem 0;
   font-size: 1.2rem;
   font-weight: lighter;
 }
@@ -159,12 +168,21 @@ aside {
   text-align: center;
   font-size: 1.8rem;
   color: #7c1b2b;
+  border-bottom: 2px #7c1b2b solid;
+  padding-bottom: .5rem;
 }
 
 /* fin boc cenrale */
 
 /* debut container images */
-.container {
+
+.parent-picture-container h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: .5rem;
+}
+.picture-container {
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(233, 227, 214);
@@ -176,9 +194,14 @@ aside {
 }
 
 .figure {
+  width: 250px;
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  background-color: white;
+  border-radius: 2%;
+  box-shadow:1px 1px 11px 5px rgba(0,0,0,0.36) ;
   padding: 1rem;
 }
 
@@ -192,6 +215,7 @@ aside {
 
 .figure__image-in {
   width: 100%;
+  object-fit: cover;
 }
 
 .bouton-action {
@@ -228,17 +252,67 @@ aside {
 
 footer {
   background-color: rgb(233, 227, 214);
-  margin: 1rem 1rem 0 0;
+  margin-top: .8rem;
   text-align: center;
   padding: 1.5rem;
 }
  /* fin du footer */
 
- @media screen (max-width: 900px) {
+ @media (max-width: 1280px) {
 
-  .bloc-centrale {
-   display:flex;
-   flex-direction:column;
+  .page {
+   width: 80%;
+   margin: auto;
+
   }
   
+ }
+
+ @media (max-width: 860px) {
+
+  .page {
+   width: 95%;
+   margin: auto;
+
+  }
+  
+ }
+
+ @media (max-width: 680px) {
+
+  .page {
+   width: 95%;
+   margin: auto;
+  
+  }
+  .bloc-centrale {
+    flex-direction: column;
+  }
+  .lien-acteurs {
+    width: 100%;
+    flex-direction: wrap;
+  }
+  .lien__title-acteur {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+  }
+ }
+
+ @media (max-width: 540px) {
+  .bloc-centrale {
+    gap: .3rem;
+  }
+  .header__title {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    
+    gap: .8rem;
+  }
+  .header__subtitle {
+    
+    width: 120px;
+    margin-left: 14rem;
+  }
  }
