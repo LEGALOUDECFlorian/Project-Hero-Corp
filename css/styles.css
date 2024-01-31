@@ -13,20 +13,17 @@ body {
   width: 70%;
   margin: 0.5rem;
   margin-left: 15%;
-  
-  /* margin: 0.5rem auto 1rem auto; */
   background-color: white;
   padding: .8rem;
 }
 
 /* debut header */
 
-header{
+header {
   background-color: white;
 }
 
 .header__logo {
-  /* border: 2px red solid; */
   margin-left: auto;
   margin-right: auto;
   width: 20rem;
@@ -35,10 +32,9 @@ header{
 .header_container_logo {
   width: 100%;
   background-color: rgb(233, 227, 214);
-  /* border: 2px blue solid; */
 }
 
-.image__principale {
+.image__main_page {
   width: 100%;
 }
 
@@ -62,54 +58,55 @@ header{
 
 /* fin header */
 
-.bloc-centrale {
+.center-block {
   display: flex;
   gap: 1%;
 }
 
 /* debut bandeau de navigation */
-.lien-acteurs {
-  background-color: rgb(233, 227, 214);
 
+.actor-link {
+  background-color: rgb(233, 227, 214);
   width: 280px;
   text-align: center;
   padding: 1rem;
 }
 
-.lien__title-acteur {
+.title-actor__link {
   box-shadow: 1px 3px 10px 1px black;
   background-color: #7c1b2b;
   border-radius: 0.3rem;
   color: rgb(233, 227, 214);
   text-shadow: 1px 1px 8px black;
   font-size: 20px;
-
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-.lien {
+.link__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
   width: 100%;
   font-size: 15px;
 }
 
-.lien__bouton {
+.link__button {
   padding: 0.3rem;
   margin: 0.5rem 0 0 0;
   border-radius: 0.3rem;
+  box-shadow: 1px 1px 2px 0 #7c1b2b;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.lien__bouton:hover {
+.link__button:hover {
   box-shadow: 0 1px 6px 1px black;
   text-shadow: 1px 1px 8px black;
   background-color: #7c1b2b;
   border-radius: 0.3rem;
   color: rgb(233, 227, 214);
-}
-
-.lien__bouton {
-  box-shadow: 1px 1px 2px 0 #7c1b2b;
 }
 
 /* fin bandeau de navigation */
@@ -142,20 +139,16 @@ header{
   margin-bottom: 2rem;
 }
 
-#logo {
-  width: 100%;
-}
-
 /* fin logo centrale */
 
-.paragraphe,
+.paragraph,
 aside {
   margin: 2rem 0;
   font-size: 1.2rem;
   font-weight: lighter;
 }
 
-.Hero {
+.hero {
   font-size: 1.5rem;
 }
 
@@ -164,7 +157,7 @@ aside {
   text-align: center;
 }
 
-.Synopsis {
+.synopsis {
   text-align: center;
   font-size: 1.8rem;
   color: #7c1b2b;
@@ -182,6 +175,7 @@ aside {
   margin-bottom: 2rem;
   padding: .5rem;
 }
+
 .picture-container {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +195,7 @@ aside {
   flex-direction: column;
   background-color: white;
   border-radius: 2%;
-  box-shadow:1px 1px 11px 5px rgba(0,0,0,0.36) ;
+  box-shadow: 1px 1px 11px 5px rgba(0, 0, 0, 0.36);
   padding: 1rem;
 }
 
@@ -218,7 +212,7 @@ aside {
   object-fit: cover;
 }
 
-.bouton-action {
+.button-action {
   background-color: #7c1b2b;
   font-size: 1.8rem;
   text-shadow: 1px 0.5px 8px rgb(233, 227, 214);
@@ -229,7 +223,7 @@ aside {
   justify-content: center;
 }
 
-.bouton-action:hover {
+.button-action:hover {
   color: rgb(233, 227, 214);
   text-shadow: 1px 1px 8px black;
   border-radius: 10px 0px 10px 0px;
@@ -256,63 +250,69 @@ footer {
   text-align: center;
   padding: 1.5rem;
 }
- /* fin du footer */
 
- @media (max-width: 1280px) {
+/* fin du footer */
 
-  .page {
-   width: 80%;
-   margin: auto;
-
-  }
-  
- }
-
- @media (max-width: 860px) {
+@media (max-width: 1280px) {
 
   .page {
-   width: 95%;
-   margin: auto;
-
+    width: 80%;
+    margin: auto;
   }
-  
- }
 
- @media (max-width: 680px) {
+}
+
+@media (max-width: 860px) {
 
   .page {
-   width: 95%;
-   margin: auto;
-  
+    width: 95%;
+    margin: auto;
   }
-  .bloc-centrale {
+
+}
+
+@media (max-width: 680px) {
+
+  .page {
+    width: 95%;
+    margin: auto;
+  }
+
+  .center-block {
     flex-direction: column;
   }
-  .lien-acteurs {
+
+  .actor-link {
     width: 100%;
     flex-direction: wrap;
   }
-  .lien__title-acteur {
+
+  .title-actor__link {
     display: flex;
     justify-content: center;
     gap: .5rem;
   }
- }
+}
 
- @media (max-width: 540px) {
-  .bloc-centrale {
+.link__title {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+@media (max-width: 540px) {
+  .center-block {
     gap: .3rem;
   }
+
   .header__title {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    
     gap: .8rem;
   }
+
   .header__subtitle {
-    
     width: 120px;
     margin-left: 14rem;
   }
- }
+}
