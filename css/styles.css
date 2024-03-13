@@ -189,7 +189,6 @@ aside {
 
 .figure {
   width: 250px;
-
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
